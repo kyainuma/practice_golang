@@ -5,19 +5,9 @@ import (
 )
 
 func main() {
-	s := []int{2, 3, 5, 7, 11, 13}
-	fmt.Println(s)
-
-	s = s[:0]
-	printSlice(s)
-
-	s = s[:4]
-	printSlice(s)
-
-	s = s[2:]
-	printSlice(s)
-}
-
-func printSlice(s []int) {
-	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+	var s []int
+	fmt.Println(s, len(s), cap(s))
+	if s == nil {
+		fmt.Println("nil!")
+	}
 }
